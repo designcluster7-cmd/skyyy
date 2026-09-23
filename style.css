@@ -282,3 +282,82 @@ nav a:hover::after {
         width: 45px;
     }
 }
+
+/* =========================
+   SMOOTH SCROLLING
+========================= */
+
+html {
+    scroll-behavior: smooth;
+}
+
+section {
+    scroll-margin-top: 75px;
+}
+
+
+/* =========================
+   PROFESSIONAL NAVIGATION
+========================= */
+
+.topbar {
+    background: rgba(5, 7, 10, 0.88);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(0, 234, 255, 0.12);
+}
+
+nav a {
+    position: relative;
+    color: #c7d1d9;
+    text-decoration: none;
+    transition: color 0.25s ease;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -7px;
+    width: 0;
+    height: 2px;
+    background: #00eaff;
+    transform: translateX(-50%);
+    transition: width 0.25s ease;
+}
+
+nav a:hover {
+    color: #00eaff;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+
+/* =========================
+   MOBILE NAVIGATION
+========================= */
+
+@media (max-width: 768px) {
+
+    nav {
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.45);
+    }
+
+    nav a {
+        display: block;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    nav a::after {
+        left: 0;
+        transform: none;
+        bottom: 2px;
+    }
+
+    nav a:hover::after {
+        width: 45px;
+    }
+}
