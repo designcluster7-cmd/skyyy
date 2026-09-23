@@ -59,3 +59,148 @@ footer img{width:80px;height:80px;object-fit:cover;border-radius:50%}footer h2{f
 .copy{margin-top:22px;color:#59646b;font-size:11px}
 @media(max-width:800px){nav{display:none}.menu{display:block}.topbar.open nav{display:flex;position:absolute;top:64px;left:0;right:0;flex-direction:column;gap:0;background:#05070a;border-bottom:1px solid var(--line)}.topbar.open nav a{padding:14px 6%;border-top:1px solid rgba(255,255,255,.05)}.about,.team,.process,.voice-grid,.checks,.project-grid{grid-template-columns:1fr}.voice-card{align-items:flex-start;flex-direction:column}.sample-btn{width:100%}.section{padding:85px 6%}.hero-inner{padding-top:100px}}
 @media print{.topbar{display:none}.hero,.section,.join,footer{page-break-after:always}.section{min-height:0}}
+
+/* =========================
+   SKYWOLF FOOTER
+========================= */
+
+.site-footer {
+    text-align: center;
+    padding: 60px 20px 30px;
+    background: #080b10;
+    border-top: 1px solid #1b2733;
+}
+
+.site-footer h3 {
+    font-size: 24px;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+.site-footer p {
+    margin: 8px 0;
+    color: #9aa7b2;
+}
+
+.site-footer a {
+    color: #c8d2da;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: 0.3s;
+}
+
+.site-footer a:hover {
+    color: #00d9ff;
+}
+
+.site-footer div {
+    margin: 25px 0;
+}
+
+.site-footer p:last-child {
+    font-size: 13px;
+    color: #66737e;
+}
+
+
+
+/* =========================
+   MOBILE RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 768px) {
+
+    .topbar {
+        height: 58px;
+        padding: 0 16px;
+    }
+
+    .brand img {
+        width: 36px;
+        height: 36px;
+    }
+
+    .brand {
+        font-size: 14px;
+    }
+
+    .menu {
+        display: block;
+        cursor: pointer;
+    }
+
+    nav {
+        display: none;
+        position: absolute;
+        top: 58px;
+        left: 0;
+        right: 0;
+        padding: 20px;
+        background: #080b10;
+        flex-direction: column;
+        gap: 18px;
+        border-top: 1px solid rgba(0, 234, 255, 0.15);
+    }
+
+    nav.open {
+        display: flex;
+    }
+
+    nav a {
+        font-size: 13px;
+        padding: 8px 0;
+    }
+
+    .hero {
+        min-height: 100vh;
+        padding: 90px 20px 50px;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: clamp(38px, 12vw, 70px);
+        line-height: 1;
+    }
+
+    .hero h2 {
+        font-size: 18px;
+    }
+
+    .hero-logo {
+        width: 180px;
+        height: 180px;
+    }
+
+    .about-grid,
+    .team-grid,
+    .process-grid,
+    .voice-grid,
+    .projects-grid,
+    .highlight-grid,
+    .why-grid,
+    .join-grid {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding: 70px 20px;
+    }
+
+    .section-label {
+        font-size: 11px;
+    }
+
+    section h2 {
+        font-size: 30px;
+    }
+
+    .site-footer {
+        padding: 45px 15px 25px;
+    }
+
+    .site-footer a {
+        display: inline-block;
+        margin: 6px 8px;
+    }
+}
+
