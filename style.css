@@ -361,3 +361,198 @@ nav a:hover::after {
         width: 45px;
     }
 }
+
+
+
+
+/* =========================
+   SKYWOLF HERO / HOME
+========================= */
+
+#home {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 50% 40%,
+            rgba(0, 210, 255, 0.12),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 15% 80%,
+            rgba(0, 100, 255, 0.08),
+            transparent 30%
+        ),
+        #05070b;
+}
+
+#home::before {
+    content: "";
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+
+    background: rgba(0, 220, 255, 0.06);
+
+    filter: blur(80px);
+
+    animation: wolfGlow 5s ease-in-out infinite alternate;
+}
+
+@keyframes wolfGlow {
+    from {
+        transform: scale(0.9);
+        opacity: 0.5;
+    }
+
+    to {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+}
+
+#home .hero {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 100px 20px 60px;
+}
+
+#home .hero-logo {
+    width: 210px;
+    height: 210px;
+    object-fit: contain;
+
+    margin-bottom: 25px;
+
+    filter:
+        drop-shadow(0 0 15px rgba(0, 234, 255, 0.35))
+        drop-shadow(0 0 45px rgba(0, 150, 255, 0.15));
+
+    animation: logoFloat 4s ease-in-out infinite;
+}
+
+@keyframes logoFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+#home .hero-tag {
+    font-size: 12px;
+    letter-spacing: 5px;
+    color: #00eaff;
+    margin-bottom: 18px;
+}
+
+#home h1 {
+    margin: 0;
+
+    font-size: clamp(45px, 8vw, 100px);
+    font-weight: 800;
+    letter-spacing: 6px;
+
+    color: #ffffff;
+
+    text-shadow:
+        0 0 15px rgba(255, 255, 255, 0.15),
+        0 0 35px rgba(0, 220, 255, 0.18);
+}
+
+#home h2 {
+    margin-top: 15px;
+
+    font-size: clamp(16px, 2vw, 25px);
+    letter-spacing: 6px;
+
+    color: #00eaff;
+}
+
+#home .tagline {
+    margin-top: 25px;
+
+    font-size: 18px;
+    letter-spacing: 3px;
+
+    color: #d7e0e6;
+}
+
+#home .subtitle {
+    margin-top: 12px;
+
+    font-size: 12px;
+    letter-spacing: 4px;
+
+    color: #7f8c96;
+}
+
+#home .hero-btn {
+    display: inline-block;
+
+    margin-top: 35px;
+    padding: 14px 28px;
+
+    border: 1px solid #00eaff;
+    border-radius: 4px;
+
+    color: #00eaff;
+    text-decoration: none;
+
+    letter-spacing: 2px;
+    font-size: 12px;
+
+    transition: 0.3s ease;
+}
+
+#home .hero-btn:hover {
+    background: #00eaff;
+    color: #05070b;
+
+    box-shadow:
+        0 0 15px rgba(0, 234, 255, 0.45),
+        0 0 40px rgba(0, 234, 255, 0.18);
+
+    transform: translateY(-3px);
+}
+
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    #home .hero {
+        padding: 90px 20px 50px;
+    }
+
+    #home .hero-logo {
+        width: 160px;
+        height: 160px;
+    }
+
+    #home .hero-tag {
+        letter-spacing: 3px;
+        font-size: 10px;
+    }
+
+    #home h1 {
+        letter-spacing: 3px;
+    }
+
+    #home h2 {
+        letter-spacing: 3px;
+    }
+
+    #home .tagline {
+        font-size: 15px;
+    }
+}
