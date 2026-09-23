@@ -1201,6 +1201,95 @@ nav a:hover::after {
         0 0 25px rgba(0, 234, 255, 0.1);
 }
 
+
+
+
+/* =========================
+   SKYWOLF ANIME CLIPS FIX
+========================= */
+
+.projects-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.projects-grid {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.project-card {
+    position: relative;
+    overflow: hidden;
+    display: block;
+    background: #0b1016;
+    border: 1px solid rgba(0, 234, 255, 0.15);
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.project-art {
+    position: relative !important;
+    width: 100% !important;
+    height: 300px !important;
+    overflow: hidden !important;
+    display: block !important;
+    background: #080b10 !important;
+    border-radius: 10px;
+    margin: 15px 0 20px;
+}
+
+.project-art img {
+    position: relative !important;
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    max-width: none !important;
+    object-fit: cover !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    z-index: 2 !important;
+}
+
+.project-card:hover .project-art img {
+    transform: scale(1.04);
+}
+
+.project-art::after {
+    pointer-events: none;
+    z-index: 3;
+}
+
+.project-card h3 {
+    position: relative;
+    z-index: 4;
+}
+
+.project-card p {
+    position: relative;
+    z-index: 4;
+}
+
+.project-tag {
+    position: relative;
+    z-index: 4;
+}
+
+@media (max-width: 768px) {
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-art {
+        height: 240px !important;
+    }
+
+}
+
 /* Clip placeholder */
 
 .project-art {
