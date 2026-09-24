@@ -1514,3 +1514,9 @@ nav a:hover::after {
 .project-art p {
   display: none !important;
 }
+
+.project-art p,
+.project-art .description,
+.project-art .project-description {
+  display: none !important;
+}
