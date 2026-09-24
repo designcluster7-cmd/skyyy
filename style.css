@@ -1500,3 +1500,13 @@ nav a:hover::after {
   padding: 0 !important;
   line-height: 1.5 !important;
 }
+
+.project-art h3 {
+  margin-top: 18px !important;
+  margin-bottom: 8px !important;
+}
+
+.project-art p {
+  margin-top: 0 !important;
+  line-height: 1.5 !important;
+}
