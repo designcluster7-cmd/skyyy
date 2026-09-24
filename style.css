@@ -1485,3 +1485,18 @@ nav a:hover::after {
   margin-top: 0 !important;
   line-height: 1.5 !important;
 }
+
+.project-art h3 {
+  position: static !important;
+  display: block !important;
+  margin: 16px 0 6px 0 !important;
+  line-height: 1.25 !important;
+}
+
+.project-art p {
+  position: static !important;
+  display: block !important;
+  margin: 6px 0 0 0 !important;
+  padding: 0 !important;
+  line-height: 1.5 !important;
+}
