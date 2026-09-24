@@ -1408,3 +1408,15 @@ nav a:hover::after {
     display: block !important;
     margin: 0 auto !important;
 }
+
+.project-art h3 {
+  margin-top: 18px !important;
+  margin-bottom: 6px !important;
+  position: relative !important;
+}
+
+.project-art p {
+  margin-top: 0 !important;
+  line-height: 1.5 !important;
+  position: relative !important;
+}
