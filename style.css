@@ -1391,3 +1391,11 @@ nav a:hover::after {
     pointer-events: none;
 }
 
+.project-art img {
+  width: 70%;
+  max-width: 300px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin: auto;
+}
