@@ -1510,3 +1510,7 @@ nav a:hover::after {
   margin-top: 0 !important;
   line-height: 1.5 !important;
 }
+
+.project-art p {
+  display: none !important;
+}
