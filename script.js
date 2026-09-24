@@ -33,6 +33,8 @@ document.querySelectorAll(".sample-btn").forEach(button => {
     document.querySelectorAll(".sample-btn").forEach(b => b.textContent = "▶ Play Sample");
     button.textContent = "⏸ Playing...";
   });
+
+  
 });
 
 // =========================
