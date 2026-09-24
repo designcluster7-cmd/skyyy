@@ -1520,3 +1520,8 @@ nav a:hover::after {
 .project-art .project-description {
   display: none !important;
 }
+
+<video controls width="100%">
+  <source src="clips/video_2026-09-24_22-08-35.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
