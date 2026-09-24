@@ -1401,9 +1401,9 @@ nav a:hover::after {
 }
 
 .project-art img {
-    width: 60% !important;
+    width: 50% !important;
     height: auto !important;
-    max-width: 60% !important;
+    max-width: 50% !important;
     object-fit: contain !important;
     display: block !important;
     margin: 0 auto !important;
