@@ -1420,3 +1420,22 @@ nav a:hover::after {
   line-height: 1.5 !important;
   position: relative !important;
 }
+
+.project-art {
+  min-height: 360px !important;
+  height: auto !important;
+  padding: 20px !important;
+  overflow: hidden !important;
+}
+
+.project-art h3 {
+  margin-top: 18px !important;
+  margin-bottom: 6px !important;
+  position: relative !important;
+}
+
+.project-art p {
+  margin-top: 0 !important;
+  line-height: 1.5 !important;
+  position: relative !important;
+}
