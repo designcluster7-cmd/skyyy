@@ -1392,7 +1392,7 @@ nav a:hover::after {
 }
 
 .project-art img {
-  width: 70%;
+  width: 55%;
   max-width: 300px;
   height: auto;
   object-fit: contain;
