@@ -1690,3 +1690,45 @@ html {
     0%, 100% { width: 80px; }
     50% { width: 180px; }
 }
+
+/* SKYWOLF MOBILE POLISH */
+@media (max-width: 768px) {
+  .container {
+    width: 92%;
+    margin: auto;
+  }
+
+  .hero {
+    min-height: 90vh;
+    padding: 80px 15px 40px;
+  }
+
+  h1 {
+    font-size: clamp(32px, 10vw, 52px);
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  .project-grid,
+  .join-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .project-art img,
+  .project-art video {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  nav {
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .topbar {
+    padding: 10px 15px;
+  }
+}
