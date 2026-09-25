@@ -1732,3 +1732,17 @@ html {
     padding: 10px 15px;
   }
 }
+
+/* FAST SKYWOLF LOADER */
+#loader {
+    animation: fastLoaderHide 1s ease forwards;
+    animation-delay: 0.5s;
+    pointer-events: none;
+}
+
+@keyframes fastLoaderHide {
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
