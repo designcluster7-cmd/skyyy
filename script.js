@@ -73,14 +73,13 @@ backToTop.addEventListener("click", () => {
 });
 
 // SKYWOLF LOADER
-document.addEventListener("DOMContentLoaded", function () {
+setTimeout(function () {
     const loader = document.getElementById("loader");
 
     if (loader) {
         loader.style.opacity = "0";
-
         setTimeout(function () {
             loader.style.display = "none";
-        }, 1500);
+        }, 300);
     }
-});
+}, 500);
