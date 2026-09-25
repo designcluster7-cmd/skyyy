@@ -84,23 +84,3 @@ setTimeout(function () {
     }
 }, 500);
 
-// SECTION REVEAL ANIMATION
-const revealSections = document.querySelectorAll("section");
-revealSections.forEach((section) => {
-    section.classList.add("reveal");
-});
-
-
-function revealOnScroll() {
-    revealSections.forEach((section) => {
-        const position = section.getBoundingClientRect().top;
-        const screenHeight = window.innerHeight;
-
-        if (position < screenHeight - 100) {
-            section.classList.add("reveal-show");
-        }
-    });
-}
-
-window.addEventListener("scroll", revealOnScroll);
-revealOnScroll();
