@@ -83,3 +83,21 @@ setTimeout(function () {
         }, 300);
     }
 }, 500);
+
+// SECTION REVEAL ANIMATION
+const revealSections = document.querySelectorAll("section");
+
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("reveal-show");
+    }
+  });
+}, {
+  threshold: 0.15
+});
+
+revealSections.forEach((section) => {
+  section.classList.add("reveal");
+  revealObserver.observe(section);
+});
