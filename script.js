@@ -73,7 +73,7 @@ backToTop.addEventListener("click", () => {
 });
 
 // SKYWOLF LOADER
-window.addEventListener("load", function () {
+document.addEventListener("DOMContentLoaded", function () {
     const loader = document.getElementById("loader");
 
     if (loader) {
