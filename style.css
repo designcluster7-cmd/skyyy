@@ -1544,3 +1544,45 @@ nav a:hover::after {
     color: #000;
     box-shadow: 0 0 20px #00eaff;
 }
+
+
+/* SKYWOLF MOBILE OPTIMIZATION */
+@media (max-width: 768px) {
+
+  .container {
+    width: 92%;
+    margin: 0 auto;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  h2 {
+    font-size: 1.7rem;
+  }
+
+  .join-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .project-art img,
+  .project-art video {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .about-intro {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+}
+
