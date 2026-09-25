@@ -86,6 +86,10 @@ setTimeout(function () {
 
 // SECTION REVEAL ANIMATION
 const revealSections = document.querySelectorAll("section");
+revealSections.forEach((section) => {
+    section.classList.add("reveal");
+});
+
 
 function revealOnScroll() {
     revealSections.forEach((section) => {
