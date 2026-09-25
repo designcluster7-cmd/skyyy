@@ -87,17 +87,16 @@ setTimeout(function () {
 // SECTION REVEAL ANIMATION
 const revealSections = document.querySelectorAll("section");
 
-const revealObserver = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("reveal-show");
-    }
-  });
-}, {
-  threshold: 0.15
-});
+function revealOnScroll() {
+    revealSections.forEach((section) => {
+        const position = section.getBoundingClientRect().top;
+        const screenHeight = window.innerHeight;
 
-revealSections.forEach((section) => {
-  section.classList.add("reveal");
-  revealObserver.observe(section);
-});
+        if (position < screenHeight - 100) {
+            section.classList.add("reveal-show");
+        }
+    });
+}
+
+window.addEventListener("scroll", revealOnScroll);
+revealOnScroll();
