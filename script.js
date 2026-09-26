@@ -1,86 +1,106 @@
+// ===============================
+// SKYWOLF NAVIGATION
+// ===============================
+
 const topbar = document.querySelector(".topbar");
 const menu = document.querySelector(".menu");
 
-menu?.addEventListener("click", () => {
-  const open = topbar.classList.toggle("open");
-  menu.setAttribute("aria-expanded", String(open));
-});
+if (menu && topbar) {
+  menu.addEventListener("click", () => {
+    const open = topbar.classList.toggle("open");
+    menu.setAttribute("aria-expanded", String(open));
+  });
 
-document.querySelectorAll("nav a").forEach(link => {
-  link.addEventListener("click", () => topbar.classList.remove("open"));
-});
+  document.querySelectorAll("nav a").forEach(link => {
+    link.addEventListener("click", () => {
+      topbar.classList.remove("open");
+      menu.setAttribute("aria-expanded", "false");
+    });
+  });
+}
+
+
+// ===============================
+// VOICE SAMPLE AUDIO
+// ===============================
 
 let currentAudio = null;
 
 document.querySelectorAll(".sample-btn").forEach(button => {
+
   button.addEventListener("click", () => {
+
     const file = button.dataset.audio;
 
+    if (!file) {
+      console.error("Audio file not found.");
+      return;
+    }
+
+    // Stop currently playing audio
     if (currentAudio) {
       currentAudio.pause();
       currentAudio.currentTime = 0;
     }
 
+    // Play selected audio
     currentAudio = new Audio(file);
-    currentAudio.play().catch(() => {
-      alert("Add your MP3 file to assets/audio/ using the filename shown in the code.");
+
+    currentAudio.play().catch(error => {
+      console.error("Audio playback error:", error);
     });
 
-    currentAudio.addEventListener("ended", () => {
-      button.textContent = "▶ Play Sample";
-    });
-
-    document.querySelectorAll(".sample-btn").forEach(b => b.textContent = "▶ Play Sample");
-    button.textContent = "⏸ Playing...";
   });
 
-  
 });
 
-// =========================
-// SKYWOLF MOBILE MENU
-// =========================
 
-const menuButton = document.querySelector(".menu");
-const navigation = document.querySelector("nav");
-
-menuButton.addEventListener("click", () => {
-
-    navigation.classList.toggle("open");
-
-    const isOpen = navigation.classList.contains("open");
-
-    menuButton.setAttribute("aria-expanded", isOpen);
-
-});
-
+// ===============================
 // BACK TO TOP
+// ===============================
+
 const backToTop = document.getElementById("backToTop");
 
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 400) {
-    backToTop.classList.add("show");
-  } else {
-    backToTop.classList.remove("show");
-  }
-});
+if (backToTop) {
 
-backToTop.addEventListener("click", () => {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth"
-  });
-});
+  window.addEventListener("scroll", () => {
 
-// SKYWOLF LOADER
-setTimeout(function () {
-    const loader = document.getElementById("loader");
-
-    if (loader) {
-        loader.style.opacity = "0";
-        setTimeout(function () {
-            loader.style.display = "none";
-        }, 300);
+    if (window.scrollY > 400) {
+      backToTop.classList.add("show");
+    } else {
+      backToTop.classList.remove("show");
     }
-}, 500);
 
+  });
+
+  backToTop.addEventListener("click", () => {
+
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+
+  });
+
+}
+
+
+// ===============================
+// SKYWOLF LOADER
+// ===============================
+
+setTimeout(function () {
+
+  const loader = document.getElementById("loader");
+
+  if (loader) {
+
+    loader.style.opacity = "0";
+
+    setTimeout(function () {
+      loader.style.display = "none";
+    }, 300);
+
+  }
+
+}, 500);
